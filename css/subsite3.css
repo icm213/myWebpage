@@ -19,7 +19,6 @@ html, body {
 .header {
     grid-area: header;
     text-align: center;
-    margin: 50px;
 }
 .navbar {
     grid-area: navbar;
@@ -73,6 +72,8 @@ h1{
     text-transform: uppercase;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-shadow: #000000 3px 3px 2px;
+    padding: 100px 0px 100px 0px;
+
 }
 p {
     font-size: 20px;
