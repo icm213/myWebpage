@@ -1,0 +1,205 @@
+html, body {
+    margin: 0;
+    padding:  0;
+    width: 100%;
+    height: 100%;
+}
+.container {
+    display: grid;
+    grid-template-areas: 
+    "header header header header"
+    "navbar navbar navbar navbar"
+    "main main main main"
+    "footer footer footer footer";
+    gap: 0 0;
+    background-color: rgb(193, 222, 255);
+    color: #161616;
+    transition: 0.3s;
+}
+.header {
+    grid-area: header;
+    text-align: center;
+    margin: 50px;
+}
+.navbar {
+    grid-area: navbar;
+    background-color: rgb(108, 204, 255);
+    display: flex;
+    box-sizing: border-box;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    transition: 0.3s;
+    flex-grow: 1;
+    z-index: 100;
+}
+.dark-navbar {
+    background-color: #0b1525;
+    color: #84bcf1;
+    transition: 0.3s;
+}
+.nav-cont {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-grow: 3;
+}
+.main {
+    grid-area: main;
+    margin: 10% 20%;
+}
+.footer {
+    grid-area:  footer;
+    height: 150px;
+    background-color: rgb(108, 204, 255);
+    text-align: center;
+}
+.dark-footer {
+    background-color: #0b1525;
+}
+.item {
+    padding: 20px;;
+}
+.nav-item {
+    box-sizing: border-box;
+    height: 28px;
+    padding: 2px;   
+}
+h1{
+    font-size: 60px;
+    text-transform: uppercase;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: #000000 3px 3px 2px;
+}
+p {
+    font-size: 20px;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+font-weight: lighter;
+line-height: 180%;
+}
+a {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    color: rgb(0, 92, 197);
+}
+a:hover {
+    color: rgb(239, 247, 255);
+}
+h3 {
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: capitalize;   
+    text-shadow: #000000 2px 2px 2px;
+}
+.dark-mode {
+    background-color: #000000;
+    color: rgb(214, 219, 224);
+    transition: 0.3s;
+}
+.button {
+    height: 26px;
+    width: 42px;
+    box-sizing: border-box;
+    border-radius: 13px;
+    background-color: rgb(193, 222, 255);
+    display: flex;
+    align-items: center;
+    padding-left: 2px;
+    transition: 0.3s;
+}
+.holder {
+    height: 18px;
+    width: 18px;
+    box-sizing: border-box;
+    background-color: inherit;
+    border-radius: 9px;
+    background-image: linear-gradient( rgb(157, 221, 255), rgb(19, 172, 255));
+}
+.dark-button {
+    background-color: #000000;
+    color: rgb(239, 246, 252);
+    padding-left: 18px;
+    transition: 0.3s;
+}
+.dark-holder {
+    background-image: linear-gradient(rgb(3, 117, 184),#152947);
+}
+.mode-bg {
+    display: flex;    
+    align-items: center;
+}
+.mode-font {
+    font-size: 10px;
+    padding: 5px;
+    color: rgb(0, 92, 197);
+}
+.dark-font {
+    color: rgb(239, 247, 255)
+}
+.icon {
+    display: none;
+}
+.navbar-background {
+    display: none;
+}
+.pic-cont{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.pic {
+    width:300px;
+    height:360px;
+}
+figure {
+    margin: 20px 0px 20px 0px;
+}
+@media screen and (max-width: 700px) {
+    .main {
+        margin: 5%;
+    }
+    h3 {
+        font-size: 30px;
+    }
+    p {
+        font-size: 16px;
+    }
+    .navbar-background {
+        display: flex;
+        background-color: inherit;
+        height: 50px;
+    }
+    .navbar {
+        position: fixed;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav-cont {
+        display: none;
+    }
+    .item {
+        padding: 10px;
+    }
+    .icon {
+        display: block;
+    }
+    .show-navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .pic-cont {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .pic {
+        width: 100%;
+        height: 100%;
+    }
+}
